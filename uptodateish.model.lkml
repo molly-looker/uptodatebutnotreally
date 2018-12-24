@@ -3,8 +3,7 @@ connection: "thelook"
 # include all the views
 include: "*.view"
 
-# include all the dashboards
-include: "*.dashboard"
+
 
 datagroup: uptodateish_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -20,6 +19,7 @@ explore: events {
     relationship: many_to_one
   }
 }
+
 
 explore: inventory_items {
   join: products {
